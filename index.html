@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Been Meaning To: your to-be-read pile, but fun</title>
+  <meta name="description" content="Been Meaning To is a playful iPhone reading tracker. Spin the shelf when you can't choose, keep a streak going, earn badges and get confetti every time you finish a book.">
+  <meta name="theme-color" content="#FFF4DE">
+  <meta property="og:title" content="Been Meaning To: your to-be-read pile, but fun">
+  <meta property="og:description" content="Spin the shelf, keep a streak, earn badges and get confetti every time you finish a book.">
+  <meta property="og:image" content="assets/img/logo/logo-sky-on-colour-2x.png">
+  <link rel="icon" href="assets/img/icon.png">
+  <link rel="apple-touch-icon" href="assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <link rel="stylesheet" href="assets/css/home.css?v=12">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 1.8c.9 3.6 6.4 6 6.4 12.1A6.4 6.4 0 0 1 5.6 14c0-3.1 1.8-5.1 3-6.1-.1 2.2.8 3.6 2 3.8C10.4 7.5 10 4.6 12 1.8z" fill="#FF5A36" stroke="#1A1A1A" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 12.2c.5 1.6 2.7 2.4 2.7 4.6a2.7 2.7 0 0 1-5.4 0c0-1.5 1.4-2.6 2.7-4.6z" fill="#FFD23F" stroke="#1A1A1A" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.1 1.2-6.5L2.6 9.3l6.5-.8z" fill="currentColor" stroke="#1A1A1A" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2.5 5.5c3-1.3 6.3-1.3 9.5.8v14c-3.2-2-6.5-2-9.5-.8zM21.5 5.5c-3-1.3-6.3-1.3-9.5.8v14c3.2-2 6.5-2 9.5-.8z" fill="#1A1A1A"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="3" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/><path d="M7 13h2M11 13h2M15 13h2M7 16.5h2M11 16.5h2" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-books" viewBox="0 0 24 24"><rect x="3" y="4" width="4.5" height="16" rx="1" fill="#1A1A1A"/><rect x="8.5" y="6" width="4.5" height="14" rx="1" fill="#1A1A1A"/><rect x="14.5" y="4.2" width="4.5" height="16" rx="1" transform="rotate(-12 16.7 12)" fill="#1A1A1A"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2 4.5 13.5h6.5L9.5 22l10-12h-6.6z" fill="#1A1A1A"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><circle cx="8" cy="8" r="1.8" fill="#1A1A1A"/><circle cx="16" cy="16" r="1.8" fill="#1A1A1A"/><circle cx="12" cy="12" r="1.8" fill="#1A1A1A"/><circle cx="16" cy="8" r="1.8" fill="#1A1A1A"/><circle cx="8" cy="16" r="1.8" fill="#1A1A1A"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><circle cx="12" cy="12" r="5.5" fill="#FF5A36" stroke="#1A1A1A" stroke-width="2"/><circle cx="12" cy="12" r="1.8" fill="#1A1A1A"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5c.8 5.6 2.9 7.7 8.5 8.5v.1c-5.6.8-7.7 2.9-8.5 8.5h-.1C11.1 13 9 10.9 3.4 10.1V10c5.6-.8 7.7-2.9 8.5-8.5z" fill="currentColor" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="1.5" width="12" height="21" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 19h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 6v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="logo" href="./"><img src="assets/img/icon.png" alt="" width="42" height="42">Been Meaning To</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links"><span></span>Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="pro/">Pro</a></li>
+      <li><a href="faq/">FAQ</a></li>
+      <li><a href="support/">Support</a></li>
+      <li><a class="btn small" href="#" data-store>Get the app</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag eyebrow">An iPhone reading tracker</span>
+        <h1>
+          <span class="word" style="--i:0">Your</span>
+          <span class="word" style="--i:1">to-be-read</span>
+          <span class="word" style="--i:2">pile,</span>
+          <span class="word" style="--i:3"><span class="hl">but fun.</span></span>
+        </h1>
+        <p class="lede">The fun way to actually read the books you own. Spin the shelf when you can't choose, keep a streak going, and get confetti every time you finish a book.</p>
+        <div class="hero-cta">
+          <a class="store" href="#" data-store>
+            <svg><use href="#i-phone"/></svg>
+            <span><small>Coming soon to the</small><b>App Store</b></span>
+          </a>
+          <a class="btn paper" href="#features">See what it does</a>
+        </div>
+        <p class="hero-note muted">For iPhone. No account, no sign-up. Your books stay yours.</p>
+      </div>
+
+      <div class="phone-stage">
+        <div class="phone"><img src="assets/img/screens/spin.jpg" alt="Been Meaning To home screen: Murder at Teatime in progress, a yearly goal of 24 books, and the shelf picking Nine Lives of Mrs Pike." width="330" height="717"></div>
+        <div class="sticker s1"><svg class="flame"><use href="#i-flame"/></svg><span><span class="big" data-count="12">12</span><small>day streak</small></span></div>
+        <div class="sticker s2"><span class="big">+25</span><small>pages<br>today</small></div>
+        <div class="sticker s3"><svg width="26" height="26" style="color:#fff"><use href="#i-star"/></svg>Badge unlocked!</div>
+      </div>
+    </div>
+
+    <div class="shelf hero-shelf wrap" aria-hidden="true" id="heroShelf"></div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Spin the shelf <i>✦</i></span><span>Keep a streak <i>✦</i></span><span>Earn badges <i>✦</i></span><span>Level up <i>✦</i></span><span>Confetti every finish <i>✦</i></span><span>Your year, wrapped <i>✦</i></span>
+      <span>Spin the shelf <i>✦</i></span><span>Keep a streak <i>✦</i></span><span>Earn badges <i>✦</i></span><span>Level up <i>✦</i></span><span>Confetti every finish <i>✦</i></span><span>Your year, wrapped <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ============ SPIN THE SHELF ============ -->
+  <section id="features">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="tag eyebrow">Spin the shelf</span>
+        <h2>Can't choose? Let the shelf pick.</h2>
+        <p class="lede">Stuck staring at a pile of unread books? Tap <b>Spin!</b> and Been Meaning To picks your next read for you. Narrow it down first: anything, something under 300 pages, or a genre you fancy.</p>
+        <ul class="ticks">
+          <li>Scan a barcode or search to add books in seconds</li>
+          <li>Drag your shelf into any order you like</li>
+          <li>Filter by genre or "under 300 pages"</li>
+        </ul>
+        <p class="muted" style="font-size:15px">Have a go. These are pretend books.</p>
+      </div>
+
+      <div class="spin-demo reveal" style="--d:.1s; --r:1deg">
+        <div class="spin-head">
+          <div>
+            <h3>Can't choose?</h3>
+            <p>Let the shelf pick your next read</p>
+          </div>
+          <button class="btn tomato spin-btn" id="spinBtn">SPIN!</button>
+        </div>
+        <div class="moods" role="group" aria-label="Mood">
+          <button class="mood" aria-pressed="true" data-mood="any">Anything</button>
+          <button class="mood" aria-pressed="false" data-mood="short">Under 300 pages</button>
+          <button class="mood" aria-pressed="false" data-mood="Mystery">Mystery</button>
+          <button class="mood" aria-pressed="false" data-mood="Romance">Romance</button>
+          <button class="mood" aria-pressed="false" data-mood="Sci-fi">Sci-fi</button>
+        </div>
+        <div class="spin-shelf"><div class="shelf" id="spinShelf"></div></div>
+        <div class="spin-result chunky" id="spinResult" aria-live="polite">
+          <div class="mini-cover" style="--c: var(--lemon)"></div>
+          <div><span class="tag">The shelf says</span><h4>Press spin!</h4><p class="muted">Fate is waiting.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STREAKS, LEVELS, BADGES ============ -->
+  <section class="band-lemon zig">
+    <div class="wrap">
+      <div class="split flip">
+        <div class="reveal">
+          <span class="tag eyebrow">Streaks, levels &amp; badges</span>
+          <h2>Make reading a habit you actually want to keep.</h2>
+          <p class="lede">Log pages with one tap. Keep your streak burning, climb seven reader levels from Page Turner to Library Legend, and collect twenty badges along the way.</p>
+          <ul class="ticks">
+            <li>Streak freezes save you on busy days</li>
+            <li>A yearly goal that tells you if you're on pace</li>
+            <li>A gentle evening nudge, only on days you haven't read</li>
+            <li>Charts for pages per week, genres and pace (Pro)</li>
+          </ul>
+        </div>
+        <div class="phone-stage reveal" style="--d:.1s">
+          <div class="phone" style="transform:rotate(-4deg)"><img src="assets/img/screens/levels.jpg" alt="Been Meaning To's progress screen: reader level 3, Chapter Chaser, and a calendar of reading days." loading="lazy" width="330" height="717"></div>
+          <div class="sticker" style="top:18%; right:-2%; --r:6deg; background:var(--lilac)"><span class="big">Lv 3</span><small>Chapter<br>Chaser</small></div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="chunky stat stat-streak reveal">
+          <h3>Streak</h3>
+          <div class="streak-num"><svg class="flame"><use href="#i-flame"/></svg><b data-count="42">42</b></div>
+          <p style="margin:6px 0 0; font-weight:700">days in a row</p>
+          <div class="freeze"><span>❄</span><span>❄</span> 2 streak freezes saved</div>
+        </div>
+
+        <div class="chunky stat stat-heat reveal" style="--d:.1s">
+          <div class="cal-head">
+            <div><h3>Reading days</h3><p class="cal-month" id="calMonth">This month</p></div>
+            <div class="cal-arrows">
+              <button class="cal-arrow" id="calPrev" aria-label="Previous month"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button class="cal-arrow" id="calNext" aria-label="Next month"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+          <div class="cal-pills"><span class="cal-pill mint"><b id="calDays">0</b> days read</span><span class="cal-pill lemon"><b id="calPages">0</b> pages</span></div>
+          <div class="cal-week" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+          <div class="heat" id="heat" data-on-view></div>
+          <div class="heat-legend">Less <i style="background:var(--ground)"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i> More <span class="heat-freeze">❄ freeze</span></div>
+        </div>
+
+        <div class="chunky stat stat-level reveal">
+          <span class="tag">Reader level</span>
+          <div class="level-top" style="margin-top:14px">
+            <div class="level-badge" id="levelNum">3</div>
+            <div style="flex:1">
+              <h3 id="levelName" style="margin:0">Chapter Chaser</h3>
+              <div class="bar"><i id="levelBar"></i></div>
+              <small class="muted" id="levelPages">634 pages logged</small>
+            </div>
+          </div>
+          <ul class="ladder" id="ladder"></ul>
+          <button class="btn small sky" id="logBtn" style="margin-top:18px">+25 pages</button>
+        </div>
+
+        <div class="chunky stat stat-badges reveal" style="--d:.1s">
+          <h3>Badges</h3>
+          <p class="muted" style="margin:0; font-size:16px">Tap a badge to see what it's for.</p>
+          <div class="badges" id="badges"></div>
+          <div class="badge-tip" id="badgeTip" aria-live="polite">20 to collect. Which will you get first?</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WRAPPED ============ -->
+  <section>
+    <div class="wrap">
+      <div class="reveal wrapped-intro">
+        <span class="tag eyebrow">Wrapped &amp; share cards</span>
+        <h2>Your year in books, wrapped up.</h2>
+        <p class="lede">At the end of the year, Been Meaning To Pro turns your reading into a colourful recap: books finished, pages turned, your longest streak and your top genre. Share it, or share a card for any book you loved.</p>
+        <ul class="ticks">
+          <li>Share cards for a book, your streak, your month, your TBR pile or your year</li>
+          <li>Save your favourite quotes, snapped with the camera (Pro)</li>
+          <li>Star ratings and a grid of everything you've finished</li>
+        </ul>
+      </div>
+      <div class="wrapped-stage" data-on-view id="wrapped">
+        <div class="wcard chunky w1">
+          <small>Pages turned</small>
+          <div class="k" data-count="7412">7,412</div>
+          <h4>Not bad for a pile you'd been meaning to read.</h4>
+        </div>
+        <div class="wcard chunky w2">
+          <small>Your 2026 in books</small>
+          <div class="k" data-count="24">24</div>
+          <div>
+            <div class="spines"><i style="height:44px;background:var(--tomato)"></i><i style="height:56px;background:var(--sky)"></i><i style="height:38px;background:var(--mint)"></i><i style="height:60px;background:var(--lilac)"></i><i style="height:48px;background:var(--pink)"></i><i style="height:52px"></i></div>
+            <h4 style="margin-top:10px">books finished</h4>
+          </div>
+        </div>
+        <div class="wcard chunky w3">
+          <small>Longest streak</small>
+          <div class="k" data-count="31">31</div>
+          <h4>days in a row. Unstoppable.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXTRAS ============ -->
+  <section class="band-sky zig">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="tag eyebrow">All around your iPhone</span>
+        <h2>Been Meaning To is never far away.</h2>
+        <p class="lede">A barcode scanner for new books and a one-step import from Goodreads. With Pro, add widgets to your home screen and a reading timer to your lock screen.</p>
+      </div>
+
+      <div class="extras">
+        <div class="chunky extra reveal">
+          <div class="demo wallpaper">
+            <div class="widgets">
+              <div class="widget sm"><svg class="flame"><use href="#i-flame"/></svg><div><b>12</b><div style="font-weight:700;font-size:14px">day streak</div></div></div>
+              <div class="widget md">
+                <div class="mini-cover" style="--c:var(--mint)"></div>
+                <div style="flex:1">
+                  <h5>The Quiet Orchard</h5>
+                  <div class="bar"><i></i></div>
+                  <small style="font-weight:700">p. 214 of 296</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Home and lock screen widgets</h3>
+          <p class="muted">Your streak and current book, one glance away.</p>
+        </div>
+
+        <div class="chunky extra reveal" style="--d:.1s">
+          <div class="demo lock">
+            <div class="lock-time" id="lockTime">9:41</div>
+            <div class="activity">
+              <div class="mini-cover" style="--c:var(--tomato)"></div>
+              <div><h5>Murder at Teatime</h5><p>Reading session</p></div>
+              <div class="clock" id="clock">00:00</div>
+            </div>
+          </div>
+          <h3>Reading timer on your lock screen</h3>
+          <p class="muted">Start a session and watch the minutes stack up, right on your lock screen.</p>
+        </div>
+
+        <div class="chunky extra reveal">
+          <div class="demo scanner">
+            <div class="book-back"><div class="barcode"></div></div>
+            <div class="scan-frame"></div>
+            <div class="scan-line"></div>
+            <div class="pill found">✓ Found it!</div>
+          </div>
+          <h3>Scan to add</h3>
+          <p class="muted">Point your camera at the barcode. Title, author, pages and cover fill themselves in.</p>
+        </div>
+
+        <div class="chunky extra reveal" style="--d:.1s">
+          <div class="demo import">
+            <span class="pill">Importing from Goodreads…</span>
+            <div class="shelf" id="importShelf"></div>
+          </div>
+          <h3>Bring your Goodreads shelf</h3>
+          <p class="muted">Export from Goodreads, import into Been Meaning To, and your whole library moves in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINISH CELEBRATION ============ -->
+  <section class="finish">
+    <div class="wrap reveal">
+      <span class="tag eyebrow">The best bit</span>
+      <h2>Finish a book. Get confetti. Every single time.</h2>
+      <p class="lede">Because finishing a book deserves a party. Go on, try it.</p>
+      <button class="btn tomato finish-btn" id="finishBtn">I finished a book! 🎉</button>
+      <p class="finish-count" id="finishCount" aria-live="polite">&nbsp;</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-card chunky reveal">
+        <svg class="spark" style="top:24px; left:28px; color:var(--lemon)"><use href="#i-spark"/></svg>
+        <svg class="spark" style="bottom:28px; right:34px; color:var(--paper); animation-direction:reverse"><use href="#i-spark"/></svg>
+        <h2>Ready to read more and have fun?</h2>
+        <p class="lede">Been Meaning To is free to start. <a href="pro/">Pro</a> unlocks the extras.</p>
+        <a class="store" href="#" data-store>
+          <svg><use href="#i-phone"/></svg>
+          <span><small>Coming soon to the</small><b>App Store</b></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/img/icon.png" alt="">Been Meaning To</div>
+        <p style="opacity:.8; max-width:24em">Read more. Have fun. A playful reading tracker for iPhone.</p>
+      </div>
+      <div>
+        <h4>App</h4>
+        <ul><li><a href="#features">Features</a></li><li><a href="pro/">Pro</a></li><li><a href="faq/">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul><li><a href="support/">Support</a></li><li><a href="privacy/">Privacy</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-base"><span>© <span data-year>2026</span> Been Meaning To</span><span>Made with lots of paper and a little glue.</span></div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js?v=12"></script>
+<script src="assets/js/home.js?v=12"></script>
+</body>
+</html>
