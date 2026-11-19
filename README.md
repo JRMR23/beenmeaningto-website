@@ -22,12 +22,12 @@ cd ~/Documents/Stacks/website && python3 serve.py
 
 Then open http://localhost:4174. `serve.py` tells the browser not to cache, so a normal refresh always shows your latest changes.
 
-The CSS and JS links in each page end in `?v=12`. When you publish changes, bump that number on every page so visitors' browsers fetch the new files.
+The CSS and JS links in each page end in `?v=13`. When you publish changes, bump that number on every page so visitors' browsers fetch the new files.
 
 ## Before launch, replace these placeholders
 
 - **App Store link:** every button with `data-store` uses `href="#"` and shows a "Coming soon" toast. Put the App Store URL in the `href` and the toast stops showing. Also change the "Coming soon to the" text.
-- **Support email and postal address:** `loudlibraryapp@gmail.com` and the Collingwood Street address in `support/` and `privacy/`.
+- **Support email and postal address:** `hello@beenmeaningto.app` and the Collingwood Street address in `support/` and `privacy/`.
 - **Privacy policy:** check it against how the app ships, and set the "Last updated" date.
 
 ## Deploy

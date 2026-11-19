@@ -137,7 +137,7 @@ p { margin: 0 0 1em; }
 }
 .site-header.scrolled { border-bottom-color: var(--ink); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
-.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-family: "Loud Logo", var(--display); font-weight: 400; font-size: 26px; letter-spacing: .01em; color: var(--lemon); -webkit-text-stroke: 5px var(--ink); paint-order: stroke fill; text-shadow: 2px 2px 0 var(--ink); }
+.logo { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; font-family: "Loud Logo", var(--display); font-weight: 400; font-size: 26px; letter-spacing: .03em; word-spacing: .04em; color: var(--lemon); -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill; text-shadow: 2px 2px 0 var(--ink); }
 .logo img { width: 42px; height: 42px; border-radius: 11px; border: var(--stroke) solid var(--ink); box-shadow: 3px 3px 0 var(--ink); transition: transform .4s var(--bounce); }
 .logo:hover img { transform: rotate(-12deg) scale(1.08); }
 .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
